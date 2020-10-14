@@ -1,0 +1,16 @@
+syntax = "proto3";
+package com.semi;
+
+message Notification {
+  int32 id = 1;
+  reserved 2;
+  string msg = 3;
+}
+
+message NotificationResponse {
+
+}
+
+service NotificationService {
+  rpc sendNotification (Notification) returns (NotificationResponse);
+}
